@@ -27,7 +27,7 @@ def abbreviate(line, journal_to_abbr, booktitile_to_abbr):
             name_abbr = ' '.join(name_abbr.split()) # spaces to space
             name_abbr = booktitile_to_abbr.get(name_abbr, name_full_strip)
             if name_abbr.split()[0] == 'Proc.':
-                name_abbr =  name_abbr.replace('Proc. ', 'Proc. '+ordinal+' ')
+                name_abbr =  name_abbr.replace('Proc.', 'Proc. '+ordinal)
             else:
                 name_abbr = ordinal + ' ' + name_abbr
         else:
