@@ -19,7 +19,7 @@ def abbreviate(line, journal_to_abbr, booktitile_to_abbr):
     if line.strip().startswith('journal'):
         name_abbr = journal_to_abbr.get(name_abbr, name_full_strip)
     elif line.strip().startswith('booktitle'):
-        name_abbr = re.sub(r'\d{4}', '', name_abbr) # remove year
+        name_abbr = re.sub('\d{4}', '', name_abbr) # remove year
         name_abbr = name_abbr.strip(' ,')
         if re.search('\d', name_abbr) is not None:
             ordinal = re.search('\d+(st|nd|rd|th)', name_abbr).group(0)
