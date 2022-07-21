@@ -6,7 +6,7 @@ There are some bibtex tools out there to help abbreviate journal names. However,
 ### Usage
 
 ```bash
-cat /path/to/old/bib/file | python journal_abbrev.py > /path/to/new/bib/file
+cat /path/to/old/bib/file | python abbrev.py > /path/to/new/bib/file
 ```
 
 Users can specify their own extra abbreviation rules through customized json file with additionl argument to the python script as `--user-json` (refer to `customize_journal.json` for an example). The customized abbreviation rules would override the default one in the case of conflict.
